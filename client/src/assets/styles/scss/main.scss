@@ -1,0 +1,12 @@
+@import '../../../../node_modules/bulma/css/bulma.min.css';
+@import './variables.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: $primary-size;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+}
