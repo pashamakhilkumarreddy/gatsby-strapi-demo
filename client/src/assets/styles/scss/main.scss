@@ -12,9 +12,15 @@ body {
 }
 
 .img__width--full {
-  width: 100%;
+  width: 100% !important;
 }
 
 .is-absolute {
   position: absolute !important;
+}
+
+.underline {
+  width: 3em;
+  border-bottom: 0.25rem solid #002bff;
+  margin: 0.5rem auto;
 }

@@ -20,6 +20,10 @@ module.exports = {
     `gatsby-plugin-react-helmet-async`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-image`,
+      options: {},
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {},

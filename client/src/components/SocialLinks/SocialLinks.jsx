@@ -3,15 +3,15 @@ import PropTypes from "prop-types"
 import socialData from "../../constants/socialLinks"
 
 const Links = () => {
-  return socialData.map(link => (
-    <li key={link.id} className="mr-4">
+  return socialData.map(({ id, url, icon }) => (
+    <li key={id} className="mr-4">
       <a
-        href={link.url}
+        href={url}
         className="social-link"
         rel="noopener noreferrer"
         target="_blank"
       >
-        {link.icon}
+        {icon}
       </a>
     </li>
   ))

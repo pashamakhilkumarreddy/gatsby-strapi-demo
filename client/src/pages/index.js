@@ -1,11 +1,13 @@
 import React from "react"
-import Hero from "../components/Hero"
 import MainLayout from "../layouts/MainLayout"
+import Hero from "../components/Hero"
+import Services from "../components/Services"
 
 const Home = () => {
   return (
     <MainLayout>
       <Hero />
+      <Services />
     </MainLayout>
   )
 }
