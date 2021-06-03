@@ -11,7 +11,7 @@ const Services = () => {
         containerClass="is-justify-content-center"
         titleClass="is-2"
       />
-      <div className="columns is-centered is-vcentered is-mobile mt-4">
+      <div className="columns is-centered is-vcentered is-mobile mt-4 is-multiline">
         {ServicesData.map(({ id, icon, title, description }) => (
           <Service
             key={id}

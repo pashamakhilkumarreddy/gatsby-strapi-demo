@@ -4,7 +4,7 @@ import * as serviceStyles from "./service.module.scss"
 
 const Service = ({ icon, title, description }) => {
   return (
-    <div className="column is-full-mobile is-6-tablet is-4-desktop is-3-widescreen is-3-fullhd">
+    <div className="column is-11-mobile is-6-tablet is-4-desktop is-3-widescreen is-3-fullhd">
       <div className={`card ${serviceStyles.card}`}>
         <div className="card-content">
           <div className="content has-text-centered">

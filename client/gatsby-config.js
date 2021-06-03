@@ -3,7 +3,6 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-
 module.exports = {
   siteMetadata: {
     title: "Gatsby Strapi Demo",
@@ -19,6 +18,27 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet-async`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.API_URL,
+        collectionTypes: [
+          {
+            name: `jobs`,
+            endpoint: `jobs`,
+          },
+          // {
+          //   name: `blogs`,
+          //   endpoint: `articles`,
+          // },
+          // {
+          //   name: `projects`,
+          //   endpoint: `projects`,
+          // },
+        ],
+        queryLimit: 900,
+      },
+    },
     {
       resolve: `gatsby-plugin-image`,
       options: {},
