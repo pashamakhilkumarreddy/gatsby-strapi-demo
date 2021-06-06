@@ -31,12 +31,12 @@ module.exports = {
           //   name: `blogs`,
           //   endpoint: `articles`,
           // },
-          // {
-          //   name: `projects`,
-          //   endpoint: `projects`,
-          // },
+          {
+            name: `projects`,
+            endpoint: `projects`,
+          },
         ],
-        queryLimit: 900,
+        queryLimit: 150,
       },
     },
     {

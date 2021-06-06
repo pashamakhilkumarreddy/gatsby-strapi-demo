@@ -1,16 +1,44 @@
 import React from "react"
 import MainLayout from "../layouts/MainLayout/MainLayout"
+import Projects from "../components/Projects"
+import { graphql } from "gatsby"
 
-const Projects = () => {
+const AllProjects = ({ data }) => {
+  const {
+    allStrapiProjects: { nodes: projects },
+  } = data
   return (
     <MainLayout>
-      <div className="columns is-centered is-vcentered is-mobile">
-        <div className="column is-full-mobile">
-          <h1>Projects</h1>
-        </div>
-      </div>
+      <Projects title="All Projects" projects={projects} showLink={false} />
     </MainLayout>
   )
 }
 
-export default Projects
+export const query = graphql`
+  query {
+    allStrapiProjects(sort: { fields: strapiId, order: ASC }) {
+      nodes {
+        id
+        strapiId
+        title
+        description
+        featured
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+        github
+        url
+        tags {
+          id
+          title
+        }
+      }
+    }
+  }
+`
+
+export default AllProjects
