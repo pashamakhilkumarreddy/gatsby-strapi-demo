@@ -5,17 +5,26 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects/Projects"
 import { graphql } from "gatsby"
+import Articles from "../components/Articles"
 
 const Home = ({ data }) => {
   const {
     allStrapiProjects: { nodes: projects },
   } = data
+  const {
+    allStrapiBlogs: { nodes: articles },
+  } = data
   return (
-    <MainLayout>
+    <MainLayout title="Home" description="Home">
       <Hero />
       <Services />
       <Jobs />
-      <Projects projects={projects} title="Featured Projects" showLink />
+      {projects ? (
+        <Projects projects={projects} title="Featured Projects" showLink />
+      ) : null}
+      {articles ? (
+        <Articles articles={articles} title="Articles" showLink />
+      ) : null}
     </MainLayout>
   )
 }
@@ -41,6 +50,28 @@ export const query = graphql`
         }
         github
         url
+        tags {
+          id
+          title
+        }
+      }
+    }
+    allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
+      nodes {
+        id
+        strapiId
+        title
+        content
+        description
+        slug
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(layout: FIXED)
+            }
+          }
+        }
+        date(formatString: "MMMM Do, YYYY")
         tags {
           id
           title

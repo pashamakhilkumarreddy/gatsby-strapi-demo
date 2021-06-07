@@ -5,10 +5,10 @@ import { graphql } from "gatsby"
 
 const AllProjects = ({ data }) => {
   const {
-    allStrapiProjects: { nodes: projects },
+    allStrapiProjects: { nodes: projects = [] },
   } = data
   return (
-    <MainLayout>
+    <MainLayout title="Projects" description="Projects">
       <Projects title="All Projects" projects={projects} showLink={false} />
     </MainLayout>
   )

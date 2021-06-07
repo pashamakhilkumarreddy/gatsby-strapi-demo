@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout/MainLayout"
 
 const PageNotFound = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Page Not Found" description="Page Not Found">
       <div className="columns is-centered is-vcentered is-mobile">
         <div className="column is-12-mobile has-text-centered">
           <h2 className="title is-2">Page Not Found</h2>

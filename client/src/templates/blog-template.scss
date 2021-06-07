@@ -1,0 +1,51 @@
+.blog-content {
+  padding: 1.5rem 0;
+}
+
+.blog-content h1,
+.blog-content h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.blog-content ul {
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+.blog-content ul li {
+  background: var(--clr-grey-9);
+  color: var(--clr-grey-5);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.blog-content blockquote {
+  background: var(--clr-primary-9);
+  border-radius: var(--radius);
+  padding: 1rem;
+  line-height: 2;
+  color: var(--clr-primary-5);
+  margin: 2rem 0;
+}
+
+.blog-content pre {
+  background: #222;
+  color: yellow;
+  overflow-x: scroll;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+}
+
+.blog-content img {
+  width: 15rem;
+  height: 15rem;
+  margin: 3rem 0;
+}

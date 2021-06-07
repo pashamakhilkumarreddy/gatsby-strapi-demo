@@ -1,10 +1,10 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import PropTypes, { object } from "prop-types"
 import React from "react"
 import Project from "./Project"
 import Title from "../Title"
 
-const Projects = ({ projects, title = "", showLink = false }) => {
+const Projects = ({ projects = [], title = "", showLink = false }) => {
   return (
     <>
       <Title title={title} />
@@ -30,7 +30,7 @@ const Projects = ({ projects, title = "", showLink = false }) => {
 }
 
 Projects.propTypes = {
-  projects: PropTypes.arrayOf(Object),
+  projects: PropTypes.arrayOf(object),
   title: PropTypes.string.isRequired,
   showLink: PropTypes.bool,
 }

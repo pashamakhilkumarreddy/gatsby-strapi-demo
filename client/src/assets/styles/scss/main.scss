@@ -1,6 +1,8 @@
 @import '../../../../node_modules/bulma/css/bulma.min.css';
 @import './variables.scss';
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
 body {
   padding: 0;
   margin: 0;
@@ -23,4 +25,14 @@ body {
   width: 3em;
   border-bottom: 0.25rem solid #002bff;
   margin: 0.5rem auto;
+}
+
+.about-image {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 80vh;
+}
+
+.contact-buttons > div {
+  width: 49%;
 }

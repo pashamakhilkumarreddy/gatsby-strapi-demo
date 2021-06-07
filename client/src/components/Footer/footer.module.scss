@@ -1,7 +1,13 @@
 .footer {
   position: absolute;
   width: 100vw;
-  bottom: -6rem;
+  bottom: -12rem;
   padding: 1.5rem !important;
   border-top: 1px solid #ddd;
+  background: #fdfdfd;
+}
+
+.social-links {
+  list-style: none !important;
+  align-items: center;
 }

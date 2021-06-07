@@ -47,7 +47,7 @@ const Hero = () => {
             </div>
             <Image
               image={gatsbyImageData}
-              className="img__width--full is-absolute"
+              className={`img__width--full is-absolute ${heroStyles.imgWrapper}`}
               alt={`Goku_Ultra_Instinct`}
               style={{ zIndex: -1, top: 0 }}
             />

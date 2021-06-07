@@ -10,12 +10,13 @@ module.exports = {
     author: "Akhil Kumar Reddy Pasham",
     twitterUsername: "",
     linkedUsername: "",
-    image: "",
-    siteUrl: "http://localhost:8000/",
+    twitterImage: "/twitter-img.jpg",
+    siteUrl: process.env.SITE_URL || "http://localhost:8000/",
   },
   /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet-async`,
     `gatsby-transformer-sharp`,
     {
@@ -27,15 +28,16 @@ module.exports = {
             name: `jobs`,
             endpoint: `jobs`,
           },
-          // {
-          //   name: `blogs`,
-          //   endpoint: `articles`,
-          // },
+          {
+            name: `blogs`,
+            endpoint: `blogs`,
+          },
           {
             name: `projects`,
             endpoint: `projects`,
           },
         ],
+        singleTypes: [`about`],
         queryLimit: 150,
       },
     },
@@ -56,6 +58,20 @@ module.exports = {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
         ignore: [`**/\.*`, `${__dirname}/src/assets/styles`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: "Roboto",
+            variants: ["400", "700"],
+          },
+          {
+            family: `Open Sans`,
+          },
+        ],
       },
     },
   ],
